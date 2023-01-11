@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import classes from './DashboardPage.module.css'
-import Product from '../Product'
 import ProductList from '../ProductList';
 
 export default function DashboardPage() {
@@ -40,14 +39,9 @@ useEffect(()=>{
 
     return (
         <div className={classes.container}>
-            Dash board
-            
              
-                    
                 <ProductList products={dataArray}/>
-             
-            
-           
+                    
             {/* <Product image={"https://i.dummyjson.com/data/products/4/1.jpg"} proName={"OPPOF19"}/> */}
             {/* <Product image={dataArray[0].images[0]} proName={dataArray[0].title}/> */}
         </div>
