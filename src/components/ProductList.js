@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 export default function ProductList({products}) {
   return (
     <div className={classes.list}>
+      <center>Product List</center>
       {
         products.map(product => (
           
