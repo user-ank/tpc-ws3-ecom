@@ -1,0 +1,12 @@
+.icon{
+    height: 23px;
+    margin: 5px;
+  }
+
+.iconContainer{
+    /* margin-left: 100px; */
+    /* width: 95px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

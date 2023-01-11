@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+span {
+	color: #f5820d;
+}
+
+body {
+	min-width: 800px;
+	/* Suppose you want minimum width of 800px */
+	width: auto !important;
+	/* Firefox will set width as auto */
+	width: 800px;
+	/* As IE6 ignores !important it will set width as 800px; */
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+header {
+	font-weight: 500;
+	background-color: #ffd965;
+	display: flex;
+	align-items: center;
+}
+
+::placeholder {
+	color: grey;
+	opacity: 1;
+	/* Firefox */
+}
+
+:-ms-input-placeholder {
+	color: grey;
+}
+
+::-ms-input-placeholder {
+	color: grey;
+}
+
+.name {
+	font-size: 20px;
+	font-family: monospace;
+	/* background-color: #ffecb5 ; */
+	font-weight: 600;
+	width: fit-content;
+	margin: 10px 15px;
+	padding: 5px 10px;
+}
+
+
+.hr {
+	/* display: block; */
+	width: 100%;
+	height: 0.5px;
+	background-color: rgb(218, 218, 218);
+}
+
+.loader{
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 10%;
+    height: 2.5px;
+    background-color: #ffa611;
+    transition: width 2s ease-in;
+	transition: visibilty 2s ease-in;
+	transition: opacity 2s ease-in;
+}
+.tenP{
+	transition: width 2s ease-in;
+	width: 10%;
+}
+
+.eightyP{
+	transition: width 2s ease-in;
+	width: 80%;
+}
+
+.hundredP{
+	transition: width 1s ease-in;
+	width: 100%;
+}
