@@ -24,6 +24,10 @@ body {
 }
 
 header {
+	/* width: 100%; */
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
 	font-weight: 500;
 	background-color: #ffd965;
 	display: flex;
@@ -63,6 +67,7 @@ header {
 }
 
 .loader{
+	visibility: hidden;
     position: absolute;
     top: 54px;
     left: 0;
