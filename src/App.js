@@ -5,6 +5,7 @@ import CartPage from "./components/pages/CartPage";
 import Loader from "./components/Loader";
 import ProductPage from "./components/pages/ProductPage";
 import { Routes, Route } from 'react-router-dom';
+import HomePage from "./components/pages/HomePage";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 			<Header />
 			<Loader/>
 			<Routes>
+				<Route path="/" exact element={<HomePage/>} />
 				<Route path="/products" element={<DashboardPage />} />
 				<Route path="/wishlist" element={<WishlistPage />} />
 				<Route path="/cart" element={<CartPage />} />
