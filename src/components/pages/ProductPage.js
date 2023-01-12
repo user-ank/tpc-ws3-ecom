@@ -3,7 +3,7 @@ import classes from './ProductPage.module.css'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 
-export default function ProductPage() {
+export default function ProductPage(props) {
 
     const params = useParams();
     console.log(params);
@@ -33,6 +33,12 @@ export default function ProductPage() {
     if (Object.keys(dataObj).length === 0) {
         return null;
     }
+
+    function todo()
+    {
+        props.onclick();
+    }
+
     return (
         
         <div className={classes.product}>
@@ -56,8 +62,8 @@ export default function ProductPage() {
 
                 <div className={classes.delivery}>{toShow}</div>
 
-                {/* <div className={classes.wishlist}>Add to wishlist</div>
-                <div className={classes.cart}>Add to cart</div> */}
+                {/* <div className={classes.wishlist}>Add to wishlist</div> */}
+                <div className={classes.cart} onClick={todo} >Add to cart</div> 
 
             </div>
 
