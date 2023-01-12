@@ -9,6 +9,7 @@ export default function ProductPage(props) {
     console.log(params);
     let id = params.productId;
 
+    // const [cartNum, updateCartNum] = useState();
     const [dataObj, setData] = useState({});
 
     let toShow = "FREE Delivery over order of $25.";
@@ -36,7 +37,12 @@ export default function ProductPage(props) {
 
     function todo()
     {
-        props.onclick();
+        let element = document.getElementById("cartNumber"); 
+        console.log(element);
+        props.onclick(dataObj);
+        // updateCartNum(props.num);
+        // console.log(cartNum);
+        // element.innerHTML = cartNum;
     }
 
     return (
