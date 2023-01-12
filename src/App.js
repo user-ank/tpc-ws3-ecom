@@ -13,13 +13,18 @@ import HomePage from "./components/pages/HomePage";
 function App() {
 
 
-	let cartList = ["habibi ", "come ", "to ", "dubai"];
+	let cartList = [];
 
-	function poping(){
-		cartList.pop();
+	function poping(item){
+		// cartList.pop();
+		cartList.push(item);
+		let element = document.getElementById("cartNumber"); 
+		element.innerHTML = cartList.length;
+		console.log(cartList.length);
+		console.log(cartList);
 	}
 
-	document.getElementById("cartNumber").innerHTML = cartList.length;
+	// document.getElementById("cartNumber").innerHTML = cartList.length;
 	return (
 		<>
 			<Header />
@@ -29,7 +34,7 @@ function App() {
 				<Route path="/products" element={<DashboardPage />} />
 				<Route path="/wishlist" element={<WishlistPage />} />
 				<Route path="/cart" element={<CartPage items={cartList} />} />
-				<Route path="/products/:productId" element={<ProductPage onclick={poping}/>}/>
+				<Route path="/products/:productId" element={<ProductPage num={cartList.length} onclick={poping}/>}/>
 			</Routes>
 
 
